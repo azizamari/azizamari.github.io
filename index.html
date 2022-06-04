@@ -8,7 +8,37 @@
     <title>Aziz Amari</title>
 </head>
 <body>
-    <h3>Experience</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sunt est deserunt et quis quas sed vero iure velit ut, consequatur tempora fugit. Et explicabo vel laudantium rem esse excepturi.</p>
+    <header>
+        <nav>
+            <span class="open-slide">
+                <a onclick="openSlideMenu()">
+                    <img src="assets/hamburger.svg" class="hamburger" alt="menu button" width="15"/>
+                </a>
+            </span>
+            <a href="/#" class="logo">
+                Aziz Amari
+            </a>
+            <ul class="nav_links">
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#skills">Skills</a></li>
+                <li><a href="/#projects">Projects</a></li>
+                <li><a href="/#blog">Blog</a></li>
+                <li><a href="/#cv">Resume</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="side-nav" id="side-menu">
+            <a class="btn-close" onclick="closeSlideMenu()">&times;</a>
+            <a class="side_links" href="/#about">About</a>
+            <a class="side_links" href="/#skills">Skills</a>
+            <a class="side_links" href="/#projects">Projects</a>
+            <a class="side_links" href="/#blog">Blog</a>
+            <a class="side_links" href="/#cv">Resume</a>
+            <a class="side_links" href="/#contact">Contact</a>
+        </div>
+    </header>
+    <div id="particle-div"></div>
+    <script src="./js/particles.min.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>
