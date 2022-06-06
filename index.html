@@ -36,21 +36,21 @@
             </span>
             <ul class="nav_links">
                 <li><a href="#about">About</a></li>
-                <li><a href="">Skills</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Blog</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="">Resume</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div class="side-nav" id="side-menu">
             <a class="btn-close" onclick="closeSlideMenu()">&times;</a>
             <a class="side_links" href="#about">About</a>
-            <a class="side_links" href="">Skills</a>
-            <a class="side_links" href="">Projects</a>
-            <a class="side_links" href="">Blog</a>
+            <a class="side_links" href="#skills">Skills</a>
+            <a class="side_links" href="#projects">Projects</a>
+            <a class="side_links" href="#blog">Blog</a>
             <a class="side_links" href="">Resume</a>
-            <a class="side_links" href="">Contact</a>
+            <a class="side_links" href="#contact">Contact</a>
         </div>
     </header>
     <div id="hero_content">
@@ -68,8 +68,9 @@
             </div>
         </div>
     </div>
-
-    <section id="about">
+    
+    <span class="anchor" id="about"></span>
+    <section class="about">
         <h2 class="section_title">About Me</h2>
         <div class="about_content">
             <div class="about_image">
@@ -81,15 +82,19 @@
             </p>
         </div>
     </section>
-    <section id="skills">
+
+    <span class="anchor" id="skills"></span>
+    <section class="skills">
         <h2 class="section_title">Skills</h2>
     </section>
-    <section id="projects">
+
+    <span class="anchor" id="projects"></span>
+    <section class="projects">
         <h2 class="section_title">Projects</h2>
     </section>
 
-
-    <section class="blog" id="blog">
+    <span class="anchor" id="blog"></span>
+    <section class="blog">
         <h2 class="section_title" >Blog</h2>
         <h3 class="section_subtitle">Featured Posts</h3>
         <div class="blog_cards">
@@ -120,11 +125,14 @@
         </div>
     </section> 
 
-    <footer id="contact">
-
-    </footer>
+    <span class="anchor" id="contact"></span>
+    <section class="contact">
+        <h2 class="section_title">Interested in Working Together?</h2>
+    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="./js/particles.min.js"></script>
     <script src="./js/app.js"></script>
 </body>
 </html>
+
+

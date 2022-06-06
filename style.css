@@ -15,6 +15,12 @@
 html{
     scroll-behavior: smooth;
 }
+.anchor {
+    display: block;
+    height: 95px; /*same height as header*/
+    margin-top: -95px; /*same height as header*/
+    visibility: hidden;
+}
 body{
     color:var(--black);
 }
@@ -264,7 +270,7 @@ nav > a{
 }
 
 /* about section */
-#about{
+.about{
     height:100%;
     background-color:var(--grey)
 }
@@ -288,21 +294,21 @@ nav > a{
 /* about section */
 
 /* skills section */
-#skills{
+.skills{
     height:70vh;
     background-color:var(--white)
 }
 /* skills section */
 
 /* projects section */
-#projects{
+.projects{
     height:70vh;
     background-color:var(--grey)
 }
 /* projects section */
 
 /* blog */
-#blog{
+.blog{
     height:100%;
     background-color:var(--white)
 }
@@ -379,6 +385,12 @@ nav > a{
 }
 
 /* blog */
+/* contact */
+.contact{
+    background-color:var(--grey);
+    padding-bottom:10rem;
+}
+/* contact */
 
 @media only screen and (max-width:1300px) {
     .intro-logo{
