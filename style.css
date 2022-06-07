@@ -361,7 +361,7 @@ nav > a{
 }
 .blog .more{
     text-align:center;
-    padding-top:3rem;
+    padding:3rem 0;
 }
 .blog .more a{
     font-size:1.1rem;
@@ -388,8 +388,40 @@ nav > a{
 /* contact */
 .contact{
     background-color:var(--grey);
-    padding-bottom:10rem;
+    height:100%;
 }
+.custom-btn {
+    width:27rem;
+    padding:1.2rem 0rem;
+    text-align:center;
+    background-color: var(--black);
+	height: auto;
+	border-radius: 0px;
+	color: var(--white);
+    font-size: 1.4rem;
+	transition: all .4s;
+    font-family: 'Roboto Slab', serif;
+    cursor: pointer;
+    text-decoration:none;
+    margin:1rem;
+}
+.blue-btn{
+    background-color:var(--primary)
+}
+
+.custom-btn:hover {
+    width:28.5rem;
+    padding:1.4rem 0rem;
+}
+.connect{
+    margin-top: 2rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
 /* contact */
 
 @media only screen and (max-width:1300px) {
@@ -399,6 +431,21 @@ nav > a{
     }
     .blog_card > h4{
         font-size:1.1rem;
+    }
+    .custom-btn {
+        width:25.5rem;
+        padding:1.1rem 0rem;
+        font-size: 1.2rem;
+    }
+    .custom-btn:hover {
+        width:27rem;
+        padding:1.3rem 0rem;
+    }
+    .contact > .section_title{
+        font-size:2.3rem;
+    }
+    .contact > .section_subtitle{
+        font-size:1.3rem;
     }
 }
 @media only screen and (max-width:952px) {
@@ -410,6 +457,12 @@ nav > a{
         width:60%;
         text-align:center;
         font-size:1rem;
+    }
+    .contact > .section_title{
+        font-size:2.1rem;
+    }
+    .contact > .section_subtitle{
+        font-size:1.15rem;
     }
 }
 @media only screen and (max-width:768px) {
@@ -476,6 +529,21 @@ nav > a{
     .blog_card .image_container{
         width:50vw;
     }
+    .contact > .section_title{
+        font-size:1.9rem;
+    }
+    .contact > .section_subtitle{
+        font-size:1rem;
+    }
+    .custom-btn {
+        width:20rem;
+        padding:1rem 0rem;
+        font-size: 1.2rem;
+    }
+    .custom-btn:hover {
+        width:22rem;
+        padding:1.1rem 0rem;
+    }
 }
 @media screen and (max-width: 560px) {
     #hero_content >p{
@@ -502,5 +570,17 @@ nav > a{
     }
     .blog_card .image_container{
         width:55vw;
+    }
+    .contact > .section_title{
+        font-size:1.5rem;
+    }
+    .custom-btn {
+        width:16rem;
+        padding:0.8rem 0rem;
+        font-size: 0.9rem;
+    }
+    .custom-btn:hover {
+        width:16rem;
+        padding:0.8rem 0rem;
     }
 }
