@@ -312,8 +312,51 @@ nav > a{
 
 /* projects section */
 .projects{
-    height:70vh;
+    height:100%;
     background-color:var(--grey)
+}
+.projects > .section_title{
+    margin-bottom:3rem;
+}
+.proj_right{
+    flex-direction: row-reverse;
+    text-align:right;
+}
+.proj{
+    width:90%;
+    display:flex;
+    align-items: center;
+    margin:auto;
+    padding-bottom:4rem;
+    justify-content:space-around;
+}
+.proj .proj_desc{
+    width:50%;
+}
+.proj h4{
+    margin:1rem 0;
+    font-size:1rem;
+    letter-spacing: 1.5px;
+    color:var(--primary);
+    font-weight:600;
+    font-family: 'Roboto Slab', serif;
+}
+.proj h3{
+    letter-spacing: 1.5px;
+    font-size:1.5rem;
+    color:var(--black);
+    font-weight:600;
+}
+.proj p{
+    margin:1rem 0;
+    font-size:1rem;
+    color:var(--black);
+    font-weight:400;
+}
+.proj > img{
+    width:25rem;
+    height:auto;
+    box-shadow: 0px 0px 25px 10px rgba(9,5,22,0.2)
 }
 /* projects section */
 
