@@ -335,7 +335,7 @@ nav > a{
 }
 .proj h4{
     margin:1rem 0;
-    font-size:1rem;
+    font-size:1.4rem;
     letter-spacing: 1.5px;
     color:var(--primary);
     font-weight:600;
@@ -343,15 +343,14 @@ nav > a{
 }
 .proj h3{
     letter-spacing: 1.5px;
-    font-size:1.5rem;
+    font-size:1.8rem;
     color:var(--black);
     font-weight:600;
 }
 .proj p{
     margin:1rem 0;
-    font-size:1rem;
+    font-size:1.15rem;
     color:var(--black);
-    font-weight:400;
 }
 .proj > img{
     width:25rem;
@@ -500,6 +499,10 @@ nav > a{
     .contact > .section_subtitle{
         font-size:1.3rem;
     }
+    .proj > img {
+        width: 23rem;
+        height: auto;
+    }
 }
 @media only screen and (max-width:952px) {
     .intro-logo{
@@ -516,6 +519,23 @@ nav > a{
     }
     .contact > .section_subtitle{
         font-size:1.15rem;
+    }
+    .proj .proj_desc {
+        width: 40%;
+        margin-right: 1rem;
+    }
+    .proj > img {
+        width: 22rem;
+        height: auto;
+    }
+    .proj h4{
+        font-size:1.25rem;
+    }
+    .proj h3{
+        font-size:1.6rem;
+    }
+    .proj p{
+        font-size:1rem;
     }
 }
 @media only screen and (max-width:768px) {
@@ -585,6 +605,9 @@ nav > a{
     .contact > .section_title{
         font-size:1.9rem;
     }
+    .projects > .section_title{
+        font-size:2.3rem;
+    }
     .contact > .section_subtitle{
         font-size:1rem;
     }
@@ -596,6 +619,30 @@ nav > a{
     .custom-btn:hover {
         width:22rem;
         padding:1.1rem 0rem;
+    }
+    .proj{
+        flex-direction: column;
+        align-items:flex-start;
+
+    }
+    .proj .proj_desc {
+        width: 90%;
+        margin-right: 0rem;
+    }
+    .proj_right{        
+        align-items:flex-end;
+    }
+    .proj p {
+        font-size: 0.9rem;
+    }
+    .proj > img {
+        margin-top: 1rem;
+    }
+    .proj h4{
+        font-size:1.15rem;
+    }
+    .proj h3{
+        font-size:1.5rem;
     }
 }
 @media screen and (max-width: 560px) {
@@ -625,7 +672,10 @@ nav > a{
         width:55vw;
     }
     .contact > .section_title{
-        font-size:1.5rem;
+        font-size:1.1rem;
+    }
+    .projects > .section_title{
+        font-size:1.6rem;
     }
     .custom-btn {
         width:16rem;
@@ -638,5 +688,9 @@ nav > a{
     }
     .scroll_down{
         font-size:1.6rem;
+    }
+    .proj > img {
+        width: 18rem;
+        height: auto;
     }
 }
