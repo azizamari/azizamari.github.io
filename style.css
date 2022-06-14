@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&display=swap');
 :root {
     --primary: #3CACDC;
@@ -226,7 +226,11 @@ nav > a{
     font-size:1.2rem;
 }
 .primary_word{
-    color:var(--primary)
+    color:var(--primary);
+    font-weight:600;
+}
+.bold_word{
+    font-weight: 600;
 }
 .mybtn{
     outline:none;
@@ -305,8 +309,45 @@ nav > a{
 
 /* skills section */
 .skills{
-    height:70vh;
+    height:100%;
     background-color:var(--white)
+}
+.skills_card_container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    width:80%;
+    margin: 4rem auto;
+}
+.skills_card{
+    width:20rem;
+    padding:1rem;
+    box-shadow: 0px 0px 25px 5px rgba(9,5,22,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 2rem 1rem;
+}
+.skills_card_title{
+    color:var(--black);
+    font-size:1.3rem;
+    font-weight:600;
+    text-align:center;
+    font-family: 'Roboto Slab', serif;
+    padding-bottom: 1rem;
+}
+.skill_items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+.skill_item{
+    background-color: var(--primary);
+    display: inline;
+    padding:0.2rem 0.4rem;
+    border-radius:4px;
+    color:var(--white);
+    margin:0.5rem;
 }
 /* skills section */
 
