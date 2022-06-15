@@ -483,6 +483,10 @@ nav > a{
     background-color:var(--grey);
     height:100%;
 }
+.contact > .section_title{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
 .custom-btn {
     width:27rem;
     padding:1.2rem 0rem;
