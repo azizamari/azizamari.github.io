@@ -398,6 +398,11 @@ nav > a{
     height:auto;
     box-shadow: 0px 0px 25px 10px rgba(9,5,22,0.2)
 }
+.proj > iframe{
+    width:25rem;
+    height:20rem;
+    box-shadow: 0px 0px 25px 10px rgba(9,5,22,0.2)
+}
 /* projects section */
 
 /* blog */
@@ -516,7 +521,7 @@ nav > a{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
 }
 
 /* contact */
@@ -548,6 +553,10 @@ nav > a{
         width: 23rem;
         height: auto;
     }
+    .proj > iframe{
+        width:23rem;
+        height:18rem;
+    }
 }
 @media only screen and (max-width:952px) {
     .intro-logo{
@@ -572,6 +581,10 @@ nav > a{
     .proj > img {
         width: 22rem;
         height: auto;
+    }
+    .proj > iframe{
+        width:22rem;
+        height:17rem;
     }
     .proj h4{
         font-size:1.25rem;
@@ -683,6 +696,9 @@ nav > a{
     .proj > img {
         margin-top: 1rem;
     }
+    .proj > iframe{
+        margin-top: 1rem;
+    }
     .proj h4{
         font-size:1.15rem;
     }
@@ -737,5 +753,9 @@ nav > a{
     .proj > img {
         width: 18rem;
         height: auto;
+    }
+    .proj > iframe {
+        width: 16rem;
+        height:13rem;
     }
 }
