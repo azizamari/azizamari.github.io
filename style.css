@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&display=swap');
 :root {
-    --primary: #3CACDC;
+    --primary: #26a1d6;
+    --lightprim: #3CACDC;
     --white: #fff;
     --black: #090516;
     --grey: #f6f6f6;
