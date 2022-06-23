@@ -414,8 +414,11 @@ nav > a{
     width:100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin-bottom: 1rem;
+}
+.proj_right .project_card{
+    justify-content: flex-end;
 }
 .project_item{
     background-color: var(--primary);
