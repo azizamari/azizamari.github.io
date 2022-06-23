@@ -1,0 +1,70 @@
+.list{
+    width: 45%;
+    align-self: center;
+    padding-top:8rem;
+    margin:auto;
+    padding-bottom:2rem;
+    color: var(--black);
+}
+
+.list h2{
+    font-family: 'Roboto Slab', serif !important;
+    font-size: 1.8rem;
+    margin: 2rem 0;
+}
+
+.post{
+    display: flex;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding-left: 0.5rem;
+    border-bottom: 4px solid var(--black);
+    margin: 1.5rem 0;
+}
+.post img{
+    height: 5rem;
+    width: auto;
+    cursor: pointer;
+}
+.post .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.post .text h3{
+    color: var(--primary);
+    cursor: pointer;
+}
+.post .text h3:hover{
+    color: var(--black);
+}
+.post .published{
+    color: #455A64;
+}
+
+@media only screen and (max-width:1300px) {
+    .list{
+        width: 60%;
+    }
+}
+@media only screen and (max-width:756px) {
+    .list{
+        width: 75%;
+    }
+
+}
+@media only screen and (max-width:560px) {
+    .list{
+        width: 85%;
+    }
+    .post .text h3{
+        font-size:1.1rem;
+    }
+    .published{
+        font-size:0.9rem;
+    }
+    .post img{
+        height: 4rem;
+        width: auto;
+    }
+}
