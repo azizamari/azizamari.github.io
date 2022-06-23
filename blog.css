@@ -1,0 +1,73 @@
+.article{
+    width: 45%;
+    align-self: center;
+    padding-top:8rem;
+    margin:auto;
+}
+.article img{
+    height:auto;
+    width:45vw;
+    margin:auto;
+}
+.article h1{
+    font-size: 2.6rem;
+    margin: 0.6rem 0;
+}
+.article h3{
+    font-family: 'Roboto Slab', serif !important;
+    margin:0.5rem 0;
+}
+.article .published{
+    color: #455A64;
+    margin: 0.6rem 0;
+}
+.article .block,.article ul{
+    margin-left:0.8rem;
+    list-style-position: inside;
+}
+.article ol{
+    margin-left: 1.8rem;
+}
+.article a{
+    color:var(--primary);
+    text-decoration:none;
+}
+.article ol  .li_title{
+    font-family: 'Roboto Slab', serif !important;
+    margin:0.5rem 0;
+}
+.article aside{
+    margin-left:1rem;
+    font-style: italic;
+}
+
+@media only screen and (max-width:1300px) {
+    .article{
+        width: 60%;
+    }
+    .article img{
+        width:60vw;
+    }
+}
+@media only screen and (max-width:756px) {
+    .article{
+        width: 75%;
+    }
+    .article img{
+        width:75vw;
+    }
+    .article h1 {
+        font-size: 2.2rem;
+    }
+}
+@media only screen and (max-width:560px) {
+    .article{
+        width: 85%;
+    }
+    .article img{
+        width:85vw;
+    }
+    .article h1 {
+        font-size: 1.8rem;
+    }
+}

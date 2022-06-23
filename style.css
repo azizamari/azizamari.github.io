@@ -482,7 +482,17 @@ nav > a{
 .blog_card h4, .blog_card p{
     text-align:center;
 }
-
+.blog_card .blog_link{
+    text-decoration:none;
+    color:var(--black);
+    padding-top:1rem;
+    font-size:1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.blog_card .blog_link:hover{
+    color:var(--primary);
+}
 /* blog */
 /* contact */
 .contact{
