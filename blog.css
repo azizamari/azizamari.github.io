@@ -3,6 +3,8 @@
     align-self: center;
     padding-top:8rem;
     margin:auto;
+    padding-bottom:2rem;
+    color: var(--black);
 }
 .article img{
     height:auto;
@@ -16,6 +18,7 @@
 .article h3{
     font-family: 'Roboto Slab', serif !important;
     margin:0.5rem 0;
+    color:var(--primary);
 }
 .article .published{
     color: #455A64;
@@ -27,6 +30,7 @@
 }
 .article ol{
     margin-left: 1.8rem;
+    
 }
 .article a{
     color:var(--primary);
@@ -35,10 +39,34 @@
 .article ol  .li_title{
     font-family: 'Roboto Slab', serif !important;
     margin:0.5rem 0;
+    
 }
 .article aside{
     margin-left:1rem;
     font-style: italic;
+}
+.article .social_media{
+    width:100%;
+    margin-top:3rem;
+}
+.article .social_media_button{
+    color:var(--black) !important;
+    vertical-align:middle;
+    margin:0.5rem;
+}
+.article .social_media .me {
+    font-size: 1.2rem;
+    margin:0.5rem;
+    font-weight:600;
+    text-decoration: none;
+    color: var(--black);
+}
+.article .social_media img {
+    border-radius: 50%;
+    width:3rem;
+    height:auto;
+    vertical-align:middle;
+    margin:0.5rem;
 }
 
 @media only screen and (max-width:1300px) {
@@ -58,6 +86,15 @@
     }
     .article h1 {
         font-size: 2.2rem;
+    }
+    .article .social_media_button{
+        font-size: 1.3rem;
+    }
+    .article .social_media p {
+        font-size: 1.1rem;
+    }
+    .article .social_media img {
+        width:3rem;
     }
 }
 @media only screen and (max-width:560px) {
