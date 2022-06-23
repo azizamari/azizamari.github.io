@@ -229,6 +229,8 @@ nav > a{
 .primary_word{
     color:var(--primary);
     font-weight:600;
+    vertical-align:middle;
+
 }
 .bold_word{
     font-weight: 600;
@@ -374,6 +376,9 @@ nav > a{
 }
 .proj .proj_desc{
     width:50%;
+}
+.proj .proj_desc a{
+    margin-right:1.5rem;
 }
 .proj h4{
     margin:1rem 0;
@@ -606,6 +611,10 @@ nav > a{
     .proj p{
         font-size:1rem;
     }
+    .proj .proj_desc a{
+        margin-right:1.2rem;
+        font-size:0.9rem;
+    }
 }
 @media only screen and (max-width:768px) {
     .intro-logo{
@@ -715,6 +724,10 @@ nav > a{
     }
     .proj h3{
         font-size:1.5rem;
+    }
+    .proj .proj_desc a{
+        margin-right:1rem;
+        font-size:0.8rem;
     }
 }
 @media screen and (max-width: 560px) {
