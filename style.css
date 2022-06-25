@@ -481,6 +481,7 @@ nav > a{
 .blog_card > p{
     font-size:0.9rem;
     font-style: italic;
+    color: #455A64;
 }
 .blog .more{
     text-align:center;
