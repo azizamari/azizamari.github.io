@@ -28,6 +28,9 @@
     margin-left:0.8rem;
     list-style-position: inside;
 }
+.article .resources{
+    margin-left:1.4rem;
+}
 .article ol{
     margin-left: 1.8rem;
     
@@ -67,6 +70,12 @@
     height:auto;
     vertical-align:middle;
     margin:0.5rem;
+}
+.article .more{
+    margin-bottom:0.5rem;
+}
+.article .more a span:hover{
+    color:var(--black);
 }
 
 @media only screen and (max-width:1300px) {
