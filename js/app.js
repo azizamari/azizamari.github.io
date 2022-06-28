@@ -26,3 +26,6 @@ for(const link of links){
 }
 
 particlesJS.load('particle-div','./js/particlesjs-config.json');
+AOS.init({
+    once: true, // whether animation should happen only once - while scrolling down
+});
