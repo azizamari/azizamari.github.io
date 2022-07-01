@@ -814,4 +814,15 @@ nav > a{
         width: 16rem;
         height:13rem;
     }
+    .proj{
+        text-align: center;
+        align-items: center;
+        padding-bottom: 3rem;
+    }
+    .proj .project_card {
+        justify-content: center;
+    }
+    .projects .section_title{
+        margin-bottom: 1rem;
+    }
 }
