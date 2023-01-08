@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Talking about your goals and ambitions does more harm than good.">
+    <meta name="keywords" content="Talk, set goals, goals, ambition, imposter syndrome, achieve, success, confidence, self help">
+    <meta name="author" content="Aziz Amari">
+    <meta property="og:image" content="https://raw.githubusercontent.com/azizamari/azizamari_updated/master/assets/blog/talk-thumbnail.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="993">
+    <meta property="og:image:height" content="615">
+    <link rel="icon" href="../assets/fav.ico" alt="logo">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../blog.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <title>Aziz Amari | Case Study Circuit Project</title>
+</head>
+<body>
+    <div class="intro">
+        <div class="intro-logo">
+          <div class="hide">
+            <img src="../assets/logo-01.png" class="intro-logo">
+          </div>
+        </div>
+      </div>
+      <div class="slider"></div>
+    </div>
+    <header>
+        <nav>
+            <span class="open-slide">
+                <a onclick="openSlideMenu()">
+                    <img src="../assets/hamburger.svg" class="hamburger" alt="menu button" width="15"/>
+                </a>
+            </span>
+            <a href="../index.html" class="logo">
+                &#60;A&#62;
+            </a>
+            <span class="open-slide">
+                <span id="temp_fix"> 
+                    <img src="../assets/hamburger.svg" class="hamburger" alt="menu button" width="15"/>
+                </span>
+            </span>
+            <ul class="nav_links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../assets/CV-Aziz-Amari.pdf"  target="_blank">Resume <i class="fas fa-file-pdf"></i></a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="side-nav" id="side-menu">
+            <a class="btn-close" onclick="closeSlideMenu()">&times;</a>
+            <a class="side_links" href="../index.html#about">About</a>
+            <a class="side_links" href="../index.html#skills">Skills</a>
+            <a class="side_links" href="../index.html#projects">Projects</a>
+            <a class="side_links" href="../blog.html">Blog</a>
+            <a class="side_links" href="../assets/CV-Aziz-Amari.pdf"  target="_blank">Resume <i class="fas fa-file-pdf"></i></a>
+            <a class="side_links" href="../index.html#contact">Contact</a>
+        </div>
+    </header>
+
+
+
+
+    <div class="article">
+        <div class="more">
+            <a href="../index.html#projects" target="_self"><span> See other projects <i class="fas fa-chevron-right"></i></span></a>
+        </div>
+        <!-- <img src="../assets/projects/case_study/circuit/cover.jpg" alt="Pciture of Electrical Circuit"> -->
+        <h1 id="talk-less-do-more">Handwritten Electrical Schema Recognition</h1>
+        <div class="published">Published on January 10, 2023</div>
+
+
+        <h3 id="introduction">Introduction</h3>
+        <p class="block">The interesting thing about this project is that it originated from a real problem I faced while studying electrical circuits at university, I looked for an app that can detect a handwritten schema for simulation without needing to spend time redesigning the circuit using a drag-and-drop tool.</p>
+        <p class="block">Also, I wanted to go through all the machine learning steps so I began by hand drawing a bunch of circuits for my dataset.</p>
+        <p><img src="../assets/projects/case_study/circuit/process.png" alt="Machine Learning Steps"></p>
+        <h3 id="data-gathering">Data Gathering</h3>
+        <p class="block">I drew 150 images containing 6 component types (capacitor, inductor, voltage source, resistor, diode, lamp).</p>
+        <p class="block">I uploaded them on Kaggle <a href="https://www.kaggle.com/datasets/amariaziz/handwritten-electrical-circuits">link</a>.</p>
+        <p class="block">Data labeling was done using <a href="https://github.com/heartexlabs/labelImg">LabelImg</a> in YOLO format.</p>
+        <p><img src="../assets/projects/case_study/circuit/stats.png" alt="stats about dataset"></p>
+        <h3 id="data-preprocessing">Data Preprocessing</h3>
+        <p class="block">Wrote a simple script using OpenCV to apply adaptive thresholding on all images (used simple thresholding at first but results weren't satisfactory) and resize them all to 320x320 pixels while filling empty space with white pixels.</p>
+        <p><img src="../assets/projects/case_study/circuit/pipeline.png" alt="pipeline"></p>
+        <h3 id="data-augmentation">Data Augmentation</h3>
+        <p class="block">Just 150 images won't allow the model to generalize but guess what? data augmentation saves the day. I used <a href="https://albumentations.ai/">albuemnations</a> library (because it also adapts the bounding boxes) to 10x the dataset by applying horizontal/ vertical flips and random rotations.</p>
+        <h3 id="model-training">Model Training</h3>
+        <p class="block">At first, I used TensorFlow's object detection API, I got it working but ended up using ultralytics implementation of yolov5 for better performance and faster training (easy to set up on a colab notebook to train 100epochs on GPU)</p>
+        <p class="block"><strong>Results:</strong></p>
+        <p class="block">We achieved around 90% confidence in object detection</p>
+        <p><img src="../assets/projects/case_study/circuit/graphs.png" alt="training and validation stats"></p>
+        <h3 id="terminal-recognition">Terminal Recognition</h3>
+        <p class="block">Each component has two terminal points, this didn't require machine learning just plain old image processing.</p>
+        <p class="block">Remove components from circuits (using their bounding boxes) and apply bitwise and like the following <strong>!circuit image &amp; boxes image</strong></p>
+        <p class="block"><img src="../assets/projects/case_study/circuit/terminal.png" alt="Terminal Recognition process"></p>
+        <p class="block">I plan to use KMeans to get the exact centroids for each terminal point, K=len(components)*2</p>
+        <h3 id="backend-api">Backend API</h3>
+        <p class="block">For this, I created two simple endpoints for inference using <a href="https://fastapi.tiangolo.com/">fastapi</a> library</p>
+        <p class="block"><img src="../assets/projects/case_study/circuit/api.png" alt="api endpoints"></p>
+        <h3 id="node-recognition">Node Recognition</h3>
+        <p class="block">I haven't worked on this part of the project yet.</p>
+        <p class="block">ps: this project is still a work in progress.</p>
+
+
+        <div class="social_media">
+            <img src="../assets/azizamari.jpg" alt="aziz amari avatar">
+            <a href="#" class="me">Aziz Amari</a>
+            <a class="social_media_button" href="https://www.linkedin.com/in/azizamari/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a class="social_media_button" href="https://github.com/azizamari" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="../js/particles.min.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>
+
+
