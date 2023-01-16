@@ -7,7 +7,7 @@
     <meta name="description" content="Case study for a persnoal Time Series Forecasting project, stock price prediction.">
     <meta name="keywords" content="AI, deep learning, machine learning, python, nltk, sentiment analysis, TensorFlow, LTSM, NLP, Hybird Model">
     <meta name="author" content="Aziz Amari">
-    <meta property="og:image" content="https://github.com/azizamari/azizamari.github.io/blob/master/assets/projects/case_study/circuit/graphs.png">
+    <meta property="og:image" content="https://github.com/azizamari/azizamari.github.io/blob/master/assets/projects/case_study/stock/cover.jpg?raw=true">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="993">
     <meta property="og:image:height" content="615">
@@ -76,30 +76,30 @@
 
         <p><a href="https://colab.research.google.com/drive/1IsNvAF3Mpkce_qUnzS2wQ357lufIANdk?usp=sharing"><i class="fas fa-code"></i> View code in colab</a></p>
         <h3 id="objective">Objective</h3>
-        <p>The goal of this project is to create a hybrid model for stock price/performance prediction using a combination of numerical analysis of historical stock prices and sentimental analysis of news headlines.</p>
+        <p class="block">The goal of this project is to create a hybrid model for stock price/performance prediction using a combination of numerical analysis of historical stock prices and sentimental analysis of news headlines.</p>
         <h3 id="data">Data</h3>
-        <p>For the purposes of this project, I'll work on analyzing and predicting SENSEX (S&amp;P BSE SENSEX).</p>
-        <p>For stock prices, I used <a href="https://pypi.org/project/yfinance/">yfinance</a> library which scrapes data from <a href="https://finance.yahoo.com/">yahoo.finance</a>.</p><br>
-        <p><img src="../assets/projects/case_study/stock/yfinance.PNG" alt="Code snippet to import yfinance data"></p>
-        <p><img src="../assets/projects/case_study/stock/histdata.png" alt="Historical Stock data"></p><br>
-        <p>For the (textual data) news headlines I used <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DPQMQH">Times of India News Headlines</a> dataset.</p>
+        <p class="block">For the purposes of this project, I'll work on analyzing and predicting SENSEX (S&amp;P BSE SENSEX).</p>
+        <p class="block">For stock prices, I used <a href="https://pypi.org/project/yfinance/">yfinance</a> library which scrapes data from <a href="https://finance.yahoo.com/">yahoo.finance</a>.</p><br>
+        <p class="block"><img src="../assets/projects/case_study/stock/yfinance.PNG" alt="Code snippet to import yfinance data"></p>
+        <p class="block"><img src="../assets/projects/case_study/stock/histdata.png" alt="Historical Stock data"></p><br>
+        <p class="block">For the (textual data) news headlines I used <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DPQMQH">Times of India News Headlines</a> dataset.</p>
         <h3 id="sentiment-analysis">Sentiment Analysis</h3>
-        <p>I used <a href="https://www.nltk.org/">NLTK - Natural Language Toolkit</a> to preprocess headlines, perform stemming and remove stop words.</p>
-        <p>Then used <a href="https://textblob.readthedocs.io/">TextBlob</a> for sentiment analysis, calculating <strong>Subjectivity and Polarity</strong>, in order to provide insight for our model on how news and media coverage can impact a stock&#39;s performance.</p>
-        <p>-Polarity &gt; 0 means the text is positive otherwise negative</p>
-        <p>-Subjectivity quantifies how personal or factual it is, high subjectivity means it is more of a personal opinion</p><br>
+        <p class="block">I used <a href="https://www.nltk.org/">NLTK - Natural Language Toolkit</a> to preprocess headlines, perform stemming and remove stop words.</p>
+        <p class="block">Then used <a href="https://textblob.readthedocs.io/">TextBlob</a> for sentiment analysis, calculating <strong>Subjectivity and Polarity</strong>, in order to provide insight for our model on how news and media coverage can impact a stock&#39;s performance.</p>
+        <p class="block">-Polarity &gt; 0 means the text is positive otherwise negative</p>
+        <p class="block">-Subjectivity quantifies how personal or factual it is, high subjectivity means it is more of a personal opinion</p><br>
         <p><img src="../assets/projects/case_study/stock/textblob.png" alt="Using Text blob"></p><br>
-        <p>Then calculated negativity, positivity, neutrality, and compound using nltk's Sentiment Intensity Analyzer</p>
+        <p class="block">Then calculated negativity, positivity, neutrality, and compound using nltk's Sentiment Intensity Analyzer</p>
         <h3 id="merging-data">Merging Data</h3>
-        <p>First, I merged the stock's historical data and resulting data from sentiment analysis then I convert the merged data to a supervised format var(t-1) → var(t)</p><br>
+        <p class="block">First, I merged the stock's historical data and resulting data from sentiment analysis then I convert the merged data to a supervised format var(t-1) → var(t)</p><br>
         <p><img src="../assets/projects/case_study/stock/vart.png" alt="merged data overview"></p><br>
         <h3 id="resulting-hybrid-model-ltsm">Resulting Hybrid Model - LTSM</h3>
-        <p>After splitting the data to test and train I built and trained a simple LTSM model using <a href="https://www.tensorflow.org/">tensorflow</a>.</p><br>
-        <p><img src="../assets/projects/case_study/stock/model.png" alt="tensorflow snippet for ltsm model"></p><br>
-        <p>Comparing training and validation loss:</p>
+        <p class="block">After splitting the data to test and train I built and trained a simple LTSM model using <a href="https://www.tensorflow.org/">tensorflow</a>.</p><br>
+        <p class="block"><img src="../assets/projects/case_study/stock/model.png" alt="tensorflow snippet for ltsm model"></p><br>
+        <p class="block">Comparing training and validation loss:</p>
         <p><img src="../assets/projects/case_study/stock/lossgraph.png" alt="visualizing loss for val and train"></p>
         <h3 id="inference-on-test-data">Inference on Test Data</h3>
-        <p>We achieved a root mean squared error of 111.046 which is good enough considering the magnitude of SENEX price values.</p>
+        <p class="block">We achieved a root mean squared error of 111.046 which is good enough considering the magnitude of SENEX price values.</p>
         
 
 
